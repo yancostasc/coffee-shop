@@ -1,0 +1,95 @@
+<div class="accordion" id="lastDays">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <span
+        class="accordion-button collapsed fw-bold"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-expanded="false"
+        aria-controls="collapseOne"
+      >
+        LAST 30 DAYS
+      </span>
+    </h2>
+    <div
+      id="collapseOne"
+      class="accordion-collapse collapse"
+      aria-labelledby="headingOne"
+      data-bs-parent="#lastDays"
+    >
+      <div *ngFor="let dailyValue of $dataDaily | async" class="accordion-body">
+        <div class="card">
+          <div class="card-body">
+            <div class="container">
+              <div
+                class="row text-start text-primary-color d-flex justify-content-start"
+              >
+                <div class="col">
+                  <span
+                    ><strong>{{
+                      dailyValue.date | date : "dd/MM/yyyy"
+                    }}</strong></span
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="col text-start">
+                  <span
+                    >OPEN:
+                    <span class="fw-semibold">{{
+                      dailyValue.open | currency : "BRL"
+                    }}</span></span
+                  >
+                </div>
+                <div class="col text-end">
+                  <span
+                    >HIGH:
+                    <span class="fw-semibold">{{
+                      dailyValue.high | currency : "BRL"
+                    }}</span></span
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="col text-start">
+                  <span
+                    >CLOSE:
+                    <span class="fw-semibold">{{
+                      dailyValue.close | currency : "BRL"
+                    }}</span></span
+                  >
+                </div>
+                <div class="col text-end">
+                  <span
+                    >LOW:
+                    <span class="fw-semibold">{{
+                      dailyValue.low | currency : "BRL"
+                    }}</span></span
+                  >
+                </div>
+                <div class="row">
+                  <div class="col text-start">
+                    <span>CLOSE DIFF (%): </span>
+                    <span *ngIf="dailyValue.diff == 0" class="fw-semibold">{{
+                      dailyValue.diff | percent : "1.2"
+                    }}</span>
+                    <span
+                      *ngIf="dailyValue.diff > 0"
+                      class="text-success fw-semibold"
+                      >+{{ dailyValue.diff | percent : "1.2" }}</span
+                    >
+                    <span
+                      *ngIf="dailyValue.diff < 0"
+                      class="text-danger fw-semibold"
+                      >{{ dailyValue.diff | percent : "1.2" }}</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+.card-shadow {
+    width: 32rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    box-shadow: 0 0.13rem 0.6rem rgba(0, 0, 0, 0.1);
+}
