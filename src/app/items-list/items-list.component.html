@@ -1,0 +1,12 @@
+<div class="items-list-background">
+<div class="container">
+  <div class="row">
+    <div class="col-md" *ngFor="let shopItem of shopList">
+        <img src="/assets/{{shopItem.img}}" *ngIf="!shopItem.disabled">
+        <img src="/assets/{{shopItem.img}}" class="img-disabled" *ngIf="shopItem.disabled">
+        <div class="shop-item-values">{{shopItem.name}}</div>
+        <div class="shop-item-values description">{{shopItem.description}}</div>
+        <div class="shop-item-values">{{shopItem.price}}</div>
+    </div>
+</div>
+</div>

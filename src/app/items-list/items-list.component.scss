@@ -1,0 +1,42 @@
+.items-list-background {
+    width: 43.5rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    background-color: #d4c6a8;
+    padding: 2rem 2rem 2rem 2rem;
+}
+img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+}
+.img-disabled {
+    opacity: 60%;
+}
+.shop-item-values {
+    font-size: small;
+    font-weight: 400;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+.shop-item-values::first-letter {
+    color: #80461B;
+}
+.shop-item-values:first-of-type {
+    font-size: medium;
+    font-weight: 500;
+}
+.description {
+    color: #80461B;
+    font-style: italic;
+}
+.shop-item-values:last-of-type {
+    padding-bottom: 2rem;
+}
+.col-md {
+    width: 13rem;
+    max-width: 13rem;
+}
+.container { 
+    box-sizing: unset;
+}
