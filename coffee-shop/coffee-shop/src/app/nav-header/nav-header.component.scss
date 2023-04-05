@@ -1,0 +1,63 @@
+@import url("https://fonts.cdnfonts.com/css/alex-brush");
+
+.background {
+  background-image: url("./assets/0_1.png");
+  height: 32rem;
+}
+.navbar-header {
+  background-color: black;
+  margin-top: 2.5rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: -webkit-fill-available;
+}
+.navbar-title {
+  color: #e9d9b7;
+  text-decoration: none;
+}
+h1:first-of-type {
+  background-color: #779556;
+  width: 9.5rem;
+  display: flex;
+  margin-left: 12rem;
+  height: inherit;
+  align-items: center;
+  word-spacing: 100vw;
+}
+h1:last-of-type {
+  margin-right: 12rem;
+  font-weight: 100;
+  font-style: italic;
+  font-size: medium;
+}
+h1,
+span {
+  padding: 0 1rem 0 1rem;
+  margin-bottom: 0;
+}
+span {
+  color: #e9d9b7;
+}
+span:hover {
+  background-color: #769556d0;
+  display: flex;
+  height: inherit;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+// .teste {
+//   background-color: #80461B ;
+// }
+// .teste2 {
+//   background-color: #779556  ;
+// }
+// .teste3 {
+//     background-color: #E9D9B7 ;
+// }
+// .teste4 {
+//     background-color: #A31F34 ;
+// }
