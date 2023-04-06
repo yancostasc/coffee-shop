@@ -12,6 +12,7 @@
   align-items: center;
   position: absolute;
   width: -webkit-fill-available;
+  cursor: pointer;
 }
 .navbar-title {
   color: #e9d9b7;
@@ -39,14 +40,13 @@ span {
 }
 span {
   color: #e9d9b7;
-}
-span:hover {
-  background-color: #769556d0;
   display: flex;
   height: inherit;
   align-items: center;
+}
+span:hover {
+  background-color: #769556;
   cursor: pointer;
-  font-weight: 600;
 }
 
 // .marrom {
