@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { shopItem } from './models/shop-item.interface';
 
-const BASE_PRICE = 5.0;
-
 @Component({
   selector: 'app-items-list',
   templateUrl: './items-list.component.html',
