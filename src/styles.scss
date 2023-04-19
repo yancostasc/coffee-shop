@@ -1,5 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "/src/assets/variables.scss";
 
 body {
-    background-color: #E9D9B7;
+  background-color: $color-beige;
 }
