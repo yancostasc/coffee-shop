@@ -1,25 +1,32 @@
 @import url("https://fonts.cdnfonts.com/css/alex-brush");
+@import "/src/assets/variables.scss";
 
 .background {
   background-image: url("./assets/0_1.png");
   height: 32rem;
 }
+
 .navbar-header {
-  background-color: black;
+  background-color: $color-black;
   margin-top: 2.5rem;
   height: 6rem;
   display: flex;
   align-items: center;
   position: absolute;
-  width: -webkit-fill-available;
-  cursor: pointer;
+  width: 100%;
 }
+
 .navbar-title {
-  color: #e9d9b7;
+  color: $color-beige;
   text-decoration: none;
+  cursor: pointer;
+  font-family: $font-alex-brush;
+  font-size: 2.5rem;
+  margin-left: 2rem;
 }
+
 h1:first-of-type {
-  background-color: #779556;
+  background-color: $color-green;
   width: 9.5rem;
   display: flex;
   margin-left: 12rem;
@@ -27,37 +34,30 @@ h1:first-of-type {
   align-items: center;
   word-spacing: 100vw;
 }
+
 h1:last-of-type {
   margin-right: 12rem;
   font-weight: 100;
   font-style: italic;
   font-size: medium;
+  font-family: $font-alex-brush;
+  color: $color-beige;
 }
+
 h1,
 span {
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem;
   margin-bottom: 0;
 }
+
 span {
-  color: #e9d9b7;
+  color: $color-beige;
   display: flex;
   height: inherit;
   align-items: center;
 }
+
 span:hover {
-  background-color: #769556;
+  background-color: $color-light-green;
   cursor: pointer;
 }
-
-// .marrom {
-//   background-color: #80461B ;
-// }
-// .verde {
-//   background-color: #779556  ;
-// }
-// .creme {
-//     background-color: #E9D9B7 ;
-// }
-// .vermelho {
-//     background-color: #A31F34 ;
-// }

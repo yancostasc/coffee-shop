@@ -1,36 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { shopItem } from './models/shop-item.interface';
 
+const BASE_PRICE = 5.0;
+
 @Component({
   selector: 'app-items-list',
   templateUrl: './items-list.component.html',
-  styleUrls: ['./items-list.component.scss']
+  styleUrls: ['./items-list.component.scss'],
 })
 export class ItemsListComponent implements OnInit {
-  shopList: shopItem[] = [{
-    img: 'pumpkin-muffin.png',
-    name: 'Pumpkin Muffin',
-    description: 'this is a pumpkin muffin!',
-    price: '$8.90',
-    disabled: false
-  }]
+  shopList: shopItem[] = [];
 
   ngOnInit(): void {
-    const muffin = [{
+    const muffin: shopItem = {
       img: 'chocolate-muffin.png',
       name: 'Chocolate Muffin',
-      description: 'this is a chocolate muffin...',
-      price: '$10.90',
-      disabled: false
-    }]
-    const coffee = [{
+      description: 'This is a chocolate muffin.',
+      price: 9.9,
+      isAvailable: false,
+    };
+    const pumpkinMuffin: shopItem = {
+      img: 'pumpkin-muffin.png',
+      name: 'Chocolate Muffin',
+      description: 'This is a pumpkin muffin.',
+      price: 9.9,
+      isAvailable: false,
+    };
+    const coffee: shopItem = {
       img: 'coffee-1.png',
       name: 'Latte Coffee',
-      description: 'this is a nice coffee.',
-      price: '$6.90',
-      disabled: true
-    }]
-    this.shopList = [... this.shopList, ... coffee, ... muffin, ... muffin, ... this.shopList]
+      description: 'This is a nice coffee.',
+      price: 6.9,
+      isAvailable: true,
+    };
+    this.shopList = [muffin, coffee, pumpkinMuffin];
   }
-
 }

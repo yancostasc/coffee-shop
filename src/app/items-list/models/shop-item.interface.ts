@@ -1,7 +1,7 @@
 export interface shopItem {
-    img: string;
-    name: string;
-    description: string;
-    price: string;
-    disabled: boolean;
+  img: string;
+  name: string;
+  description: string;
+  price: number;
+  isAvailable: boolean;
 }
