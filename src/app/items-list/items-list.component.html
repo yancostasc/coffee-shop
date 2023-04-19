@@ -2,11 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md" *ngFor="let shopItem of shopList">
-        <img src="/assets/{{shopItem.img}}" *ngIf="!shopItem.isAvailable ">
-        <img src="/assets/{{shopItem.img}}" class="img-disabled" *ngIf="shopItem.isAvailable ">
-        <div class="shop-item-values">{{shopItem.name}}</div>
-        <div class="shop-item-values description">{{shopItem.description}}</div>
-        <div class="shop-item-values">${{shopItem.price}}</div>
+        <div class="shop-item">
+          <img src="/assets/{{shopItem.img}}" *ngIf="!shopItem.isAvailable ">
+          <img src="/assets/{{shopItem.img}}" class="img-disabled" *ngIf="shopItem.isAvailable ">
+          <div class="shop-item-values shop-item-name">{{shopItem.name}}</div>
+          <div class="shop-item-values shop-item-description">{{shopItem.description}}</div>
+          <div class="shop-item-values shop-item-price">${{shopItem.price}}</div>
+        </div>
       </div>
     </div>
   </div>
+</div>
