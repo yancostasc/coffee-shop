@@ -1,12 +1,20 @@
 @import "/src/assets/variables.scss";
 
+h2 {
+  width: 100%;
+  max-width: 40rem;
+  margin: auto auto 0;
+  padding: 0 2rem 2rem 2rem;
+  text-transform: uppercase;
+  font-size: larger;
+}
+
 .items-list-background {
   width: 100%;
-  max-width: 43.5rem;
-  margin: 2rem auto 0;
+  max-width: 60rem;
+  margin: auto auto 0;
   background-color: $background-color;
-  padding: 2rem;
-  margin-bottom: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   box-sizing: border-box;
 }
 
@@ -18,27 +26,35 @@ img {
 }
 
 .img-disabled {
+  //TODO: está aparecendo a opacity quando a tela está pequena o suficiente para a imagem atravessar a navbar
   opacity: 0.6;
+}
+
+.row {
+  justify-content: center;
 }
 
 .shop-item-values {
   font-size: 0.9rem;
   font-weight: 400;
   overflow-wrap: break-word;
-}
 
-.shop-item-values::first-letter {
-  color: $primary-color;
-}
+  &:last-of-type {
+    margin-bottom: 1rem;
+  }
 
-.shop-item-values:first-of-type {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-top: 1rem;
+  &::first-letter {
+    color: $color-brown;
+  }
+
+  &:first-of-type {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
 }
 
 .description {
-  color: $primary-color;
+  color: $color-brown;
   font-style: italic;
   font-size: 1.1rem;
   margin-top: 1rem;

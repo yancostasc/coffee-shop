@@ -2,18 +2,19 @@
 @import "/src/assets/variables.scss";
 
 .background {
-  background-image: url("./assets/0_1.png");
-  height: 32rem;
+  background-image: url("./assets/background-image2.png");
+  background-size: cover;
+  height: 35rem;
 }
 
 .navbar-header {
-  background-color: $color-black;
-  margin-top: 2.5rem;
+  background-color: #0f0d0d;
   height: 6rem;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
+  justify-content: center;
 }
 
 .navbar-title {
@@ -22,42 +23,67 @@
   cursor: pointer;
   font-family: $font-alex-brush;
   font-size: 2.5rem;
-  margin-left: 2rem;
 }
 
 h1:first-of-type {
-  background-color: $color-green;
-  width: 9.5rem;
   display: flex;
-  margin-left: 12rem;
   height: inherit;
   align-items: center;
-  word-spacing: 100vw;
-}
-
-h1:last-of-type {
-  margin-right: 12rem;
-  font-weight: 100;
-  font-style: italic;
-  font-size: medium;
-  font-family: $font-alex-brush;
-  color: $color-beige;
 }
 
 h1,
-span {
+.item-list,
+.fa-cart-shopping {
   padding: 0 1rem;
   margin-bottom: 0;
+  transition: all 0.3s ease;
 }
 
-span {
+.item-list,
+.background-information-text {
   color: $color-beige;
   display: flex;
   height: inherit;
   align-items: center;
 }
 
-span:hover {
-  background-color: $color-light-green;
+.item-list:hover,
+.fa-cart-shopping:hover {
+  background-color: rgba($color-beige, 0.2);
   cursor: pointer;
+}
+
+.fa-cart-shopping {
+  color: $color-beige;
+  height: inherit;
+  width: 1.3rem;
+}
+
+.background-information-text {
+  display: flex;
+  width: 100%;
+  padding: 0 0 2rem 0;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.background-information-text > span {
+  width: 16rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.btn {
+  background-color: $color-beige;
+  color: $color-black;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($color-beige, 10%);
+  }
 }

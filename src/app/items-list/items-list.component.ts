@@ -19,7 +19,7 @@ export class ItemsListComponent implements OnInit {
     };
     const pumpkinMuffin: shopItem = {
       img: 'pumpkin-muffin.png',
-      name: 'Chocolate Muffin',
+      name: 'Pumpkin Muffin',
       description: 'This is a pumpkin muffin.',
       price: 9.9,
       isAvailable: false,
@@ -31,6 +31,6 @@ export class ItemsListComponent implements OnInit {
       price: 6.9,
       isAvailable: true,
     };
-    this.shopList = [muffin, coffee, pumpkinMuffin];
+    this.shopList = [muffin, coffee, pumpkinMuffin, muffin];
   }
 }
