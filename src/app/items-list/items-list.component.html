@@ -1,16 +1,22 @@
-<div class="items-list-background">
-  <h2>Descubra os sabores únicos dos nossos produtos</h2>
-  <div class="container">
-    <div class="row">
-      <div class="col-md" *ngFor="let shopItem of shopList">
-        <div class="shop-item">
-          <img src="/assets/{{shopItem.img}}" *ngIf="!shopItem.isAvailable ">
-          <img src="/assets/{{shopItem.img}}" class="img-disabled" *ngIf="shopItem.isAvailable ">
-          <div class="shop-item-values shop-item-name">{{shopItem.name}}</div>
-          <div class="shop-item-values shop-item-description">{{shopItem.description}}</div>
-          <div class="shop-item-values shop-item-price">${{shopItem.price}}</div>
-        </div>
-      </div>
+<div class="background">
+    <div class="background-information-text">
+        <span>Explore nosso mundo de café. Sabores únicos e qualidade excepcional.</span>
+        <button class="btn" (click)="scrollDown()">Experimente agora</button>
     </div>
-  </div>
+</div>
+<div class="items-list-background">
+    <h2>Descubra os sabores únicos dos nossos produtos</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md" *ngFor="let shopItem of shopList">
+                <div class="shop-item">
+                    <img src="/assets/{{shopItem.img}}" *ngIf="!shopItem.isAvailable ">
+                    <img src="/assets/{{shopItem.img}}" class="img-disabled" *ngIf="shopItem.isAvailable ">
+                    <div class="shop-item-values shop-item-name">{{shopItem.name}}</div>
+                    <div class="shop-item-values shop-item-description">{{shopItem.description}}</div>
+                    <div class="shop-item-values shop-item-price">${{shopItem.price}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

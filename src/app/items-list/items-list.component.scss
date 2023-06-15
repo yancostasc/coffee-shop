@@ -1,5 +1,11 @@
 @import "/src/assets/variables.scss";
 
+.background {
+  background-image: url("./assets/background-image2.png");
+  background-size: cover;
+  height: 35rem;
+}
+
 h2 {
   width: 100%;
   max-width: 40rem;
@@ -18,6 +24,41 @@ h2 {
   box-sizing: border-box;
 }
 
+.background-information-text {
+  color: $color-beige;
+  display: flex;
+  height: inherit;
+  align-items: center;
+}
+
+.background-information-text {
+  display: flex;
+  width: 100%;
+  padding: 0 0 2rem 0;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.background-information-text > span {
+  width: 16rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.btn {
+  background-color: $color-beige;
+  color: $color-black;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($color-beige, 10%);
+  }
+}
 img {
   width: 100%;
   max-width: 12rem;

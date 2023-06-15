@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { shopItem } from './models/shop-item.interface';
 
 @Component({
@@ -8,6 +8,8 @@ import { shopItem } from './models/shop-item.interface';
 })
 export class ItemsListComponent implements OnInit {
   shopList: shopItem[] = [];
+
+  constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
     const muffin: shopItem = {
@@ -32,5 +34,10 @@ export class ItemsListComponent implements OnInit {
       isAvailable: true,
     };
     this.shopList = [muffin, coffee, pumpkinMuffin, muffin];
+  }
+
+  scrollDown() {
+    const element = this.elementRef.nativeElement;
+    element.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
 }
