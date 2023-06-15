@@ -1,8 +1,10 @@
 <nav class="navbar-header">
-  <span class="item-list">Menu</span>
+  <a class="item-list" href="">
+    <span>Menu</span>
+  </a>
   <span class="item-list">Sobre nós</span>
   <span class="item-list">Contato</span>
-  <h1 class="navbar-title" href="#">Coffee Break</h1>
+  <h1 class="navbar-title">Coffee Break</h1>
   <span class="item-list">Login</span>
   <span class="item-list">Cadastro</span>
   <i class="fa-solid fa-cart-shopping"></i>
@@ -10,7 +12,7 @@
 <div class="background">
   <div class="background-information-text">
     <span>Explore nosso mundo de café. Sabores únicos e qualidade excepcional.</span>
-    <button class="btn">Experimente agora</button>
+    <button class="btn" (click)="scrollDown()">Experimente agora</button>
   </div>
 </div>
 <app-items-list></app-items-list>
