@@ -33,7 +33,16 @@ export class ItemsListComponent implements OnInit {
       price: 6.9,
       isAvailable: true,
     };
-    this.shopList = [muffin, coffee, pumpkinMuffin, muffin];
+    this.shopList = [
+      muffin,
+      coffee,
+      pumpkinMuffin,
+      muffin,
+      coffee,
+      muffin,
+      pumpkinMuffin,
+      pumpkinMuffin,
+    ];
   }
 
   scrollDown() {
