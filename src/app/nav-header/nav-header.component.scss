@@ -1,12 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/alex-brush");
 @import "/src/assets/variables.scss";
 
-.background {
-  background-image: url("./assets/background-image2.png");
-  background-size: cover;
-  height: 35rem;
-}
-
 .navbar-header {
   background-color: #0f0d0d;
   height: 6rem;
@@ -43,8 +37,7 @@ h1,
   transition: all 0.3s ease;
 }
 
-.item-list,
-.background-information-text {
+.item-list {
   color: $color-beige;
   display: flex;
   height: inherit;
@@ -61,33 +54,4 @@ h1,
   color: $color-beige;
   height: inherit;
   width: 1.3rem;
-}
-
-.background-information-text {
-  display: flex;
-  width: 100%;
-  padding: 0 0 2rem 0;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-
-.background-information-text > span {
-  width: 16rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.btn {
-  background-color: $color-beige;
-  color: $color-black;
-  border: none;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: darken($color-beige, 10%);
-  }
 }

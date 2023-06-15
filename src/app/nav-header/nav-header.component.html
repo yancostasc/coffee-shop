@@ -1,18 +1,21 @@
 <nav class="navbar-header">
-  <a class="item-list" href="">
+  <a class="item-list" routerLink="/products">
     <span>Menu</span>
   </a>
-  <span class="item-list">Sobre nós</span>
-  <span class="item-list">Contato</span>
-  <h1 class="navbar-title">Coffee Break</h1>
-  <span class="item-list">Login</span>
-  <span class="item-list">Cadastro</span>
+  <a class="item-list" routerLink="/about">
+    <span>Sobre nós</span>
+  </a>
+  <a class="item-list" routerLink="/contact">
+    <span>Contato</span>
+  </a>
+  <a class="item-list" routerLink="/products">
+    <h1 class="navbar-title">Coffee Break</h1>
+  </a>
+  <a class="item-list" routerLink="/login">
+    <span>Login</span>
+  </a>
+  <a class="item-list" routerLink="/register">
+    <span>Cadastro</span>
+  </a>
   <i class="fa-solid fa-cart-shopping"></i>
 </nav>
-<div class="background">
-  <div class="background-information-text">
-    <span>Explore nosso mundo de café. Sabores únicos e qualidade excepcional.</span>
-    <button class="btn" (click)="scrollDown()">Experimente agora</button>
-  </div>
-</div>
-<app-items-list></app-items-list>
