@@ -1,0 +1,91 @@
+@import "/src/assets/variables.scss";
+
+.background {
+  width: 100%;
+  max-width: 60rem;
+  margin: auto auto 0;
+  background-color: $background-color;
+  padding: 8rem 2rem 1rem 2rem;
+  box-sizing: border-box;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  margin: auto auto 0;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+}
+
+.signup-container {
+  width: 18rem;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #0f0d0d;
+}
+
+.btn {
+  background-color: #0f0d0d;
+  color: $color-beige;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  &:hover {
+    background-color: rgba(#0f0d0d, 0.7);
+  }
+}
+
+.styled-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.input-label {
+  position: absolute;
+  font-size: 1rem;
+  margin: -0.8rem 0.5rem 1rem 1rem;
+  background-color: #d4c6a8;
+  transition: all 0.3s ease;
+  padding: 0 0.3rem 0 0.3rem;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #d4c6a8 inset !important;
+}
