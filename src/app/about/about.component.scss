@@ -1,0 +1,40 @@
+@import "/src/assets/variables.scss";
+
+.background {
+  width: 100%;
+  max-width: 60rem;
+  margin: auto auto 0;
+  background-color: $background-color;
+  padding: 8rem 2rem 1rem 2rem;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img {
+  margin: auto auto 0;
+  background-image: url("./assets/61210138.jpg");
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.center-links {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 1rem 0 1rem 0;
+}
+
+.contact-icon {
+  padding: 0 0.5rem;
+  color: #0f0d0d;
+}
