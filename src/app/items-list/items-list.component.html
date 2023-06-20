@@ -10,8 +10,8 @@
         <div class="row">
             <div class="col-md" *ngFor="let shopItem of shopList">
                 <div class="shop-item">
-                    <img src="/assets/{{shopItem.img}}" *ngIf="!shopItem.isAvailable ">
-                    <img src="/assets/{{shopItem.img}}" class="img-disabled" *ngIf="shopItem.isAvailable ">
+                    <img src="{{shopItem.img}}" *ngIf="!shopItem.isAvailable ">
+                    <img src="{{shopItem.img}}" class="img-disabled" *ngIf="shopItem.isAvailable ">
                     <div class="shop-item-values shop-item-name">{{shopItem.name}}</div>
                     <div class="shop-item-values shop-item-description">{{shopItem.description}}</div>
                     <div class="shop-item-values shop-item-price">${{shopItem.price}}</div>

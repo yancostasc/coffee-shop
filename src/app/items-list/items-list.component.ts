@@ -1,48 +1,63 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { shopItem } from './models/shop-item.interface';
+import { CoffeeService } from './coffee-service.service';
 
 @Component({
   selector: 'app-items-list',
   templateUrl: './items-list.component.html',
   styleUrls: ['./items-list.component.scss'],
+  providers: [CoffeeService],
 })
 export class ItemsListComponent implements OnInit {
   shopList: shopItem[] = [];
+  coffeeData: any;
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(
+    private elementRef: ElementRef,
+    private coffeeService: CoffeeService
+  ) {}
 
   ngOnInit(): void {
-    const muffin: shopItem = {
-      img: 'chocolate-muffin.png',
-      name: 'Chocolate Muffin',
-      description: 'This is a chocolate muffin.',
-      price: 9.9,
-      isAvailable: false,
-    };
-    const pumpkinMuffin: shopItem = {
-      img: 'pumpkin-muffin.png',
-      name: 'Pumpkin Muffin',
-      description: 'This is a pumpkin muffin.',
-      price: 9.9,
-      isAvailable: false,
-    };
-    const coffee: shopItem = {
-      img: 'coffee-1.png',
-      name: 'Latte Coffee',
-      description: 'This is a nice coffee.',
-      price: 6.9,
-      isAvailable: true,
-    };
+    const defaultMuffin: shopItem = this.createDefaultMuffin();
     this.shopList = [
-      muffin,
-      coffee,
-      pumpkinMuffin,
-      muffin,
-      coffee,
-      muffin,
-      pumpkinMuffin,
-      pumpkinMuffin,
+      defaultMuffin,
+      defaultMuffin,
+      defaultMuffin,
+      defaultMuffin,
     ];
+    this.updateShopListWithFiles();
+  }
+
+  createDefaultMuffin(): shopItem {
+    return {
+      img: '/assets/mug-hot-solid.svg',
+      name: 'Shop Product',
+      description: 'This is a random shop product!',
+      price: 1.0,
+      isAvailable: false,
+    };
+  }
+
+  updateShopListWithFiles(): void {
+    const updatedShopList: shopItem[] = [];
+
+    for (const originalMuffin of this.shopList) {
+      const updatedMuffin: shopItem = { ...originalMuffin };
+
+      this.randomizePriceAndSetImage(updatedMuffin);
+
+      updatedShopList.push(updatedMuffin);
+    }
+    this.shopList = updatedShopList;
+  }
+
+  randomizePriceAndSetImage(updatedMuffin: shopItem): void {
+    const randomPrice = Math.random() * (20 - 1) + 1;
+    updatedMuffin.price = parseFloat(randomPrice.toFixed(2));
+
+    this.coffeeService.getFileFromCoffeeData().subscribe((file: string) => {
+      updatedMuffin.img = file;
+    });
   }
 
   scrollDown() {
