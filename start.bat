@@ -1,7 +1,7 @@
 @echo off
 
 echo Starting the Angular server.
-ng serve
+start ng serve
 
 echo Waiting for 5 seconds to ensure the Angular server is up and running.
 timeout 5 > nul
