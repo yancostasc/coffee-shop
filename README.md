@@ -21,11 +21,16 @@ This is a coffee website project developed in Angular. It provides an online pla
 2. Open the terminal and navigate to the project's root directory.
 3. Run the command `npm install` to install project dependencies.
 
-## Usage
+## Usage Windows / Linux
 
-1. After the installation is complete, run the command `ng serve` to start the development server.
+1. After the installation is complete, run the command `ng serve` to start the development server.7
 2. In order to access data from the server, you need to run the Node.js server. To do this, navigate to the backend directory and run the command `node server.js`.
 3. Open your web browser and visit `http://localhost:4200` to view the coffee website.
+
+## Usage Windows
+
+If you are on Windows and want to start both the Angular and Node.js servers simultaneously, you can use the provided start.sh script by executing the following command `./start.sh`
+This script will automatically start the Angular server using ng serve and then navigate to the backend directory and start the Node.js server using node server.js. The Angular server will be accessible at `http://localhost:4200`.
 
 ## Contribution
 
