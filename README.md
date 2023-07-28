@@ -29,7 +29,12 @@ This is a coffee website project developed in Angular. It provides an online pla
 
 ## Usage Windows
 
-If you are on Windows and want to start both the Angular and Node.js servers simultaneously, you can use the provided start.sh script by executing the following command `./start.sh`
+If you are on Windows and want to start both the Angular and Node.js servers simultaneously, follow these steps:
+
+1. Open a terminal in the root of your Angular project.
+2. Copy and paste the following command in the terminal: `./start.sh`
+3. Open your web browser and visit `http://localhost:4200` to view the coffee website.
+
 This script will automatically start the Angular server using ng serve and then navigate to the backend directory and start the Node.js server using node server.js. The Angular server will be accessible at `http://localhost:4200`.
 
 ## Contribution
